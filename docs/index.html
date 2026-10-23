@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ci-data — Open data &amp; API pour la Côte d’Ivoire</title>
+<meta name="description" content="14 districts, 31 régions, 108 départements, 510 sous-préfectures, 946 communes, jours fériés 2023-2032 et plan de numérotation ARTCI : données ouvertes et versionnées pour la Côte d’Ivoire.">
+<meta property="og:title" content="ci-data — Open data &amp; API pour la Côte d’Ivoire">
+<meta property="og:description" content="Régions, communes, jours fériés et numérotation téléphonique : données sourcées, versionnées, MIT.">
+<meta property="og:image" content="assets/banner.png">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+  :root { --bg:#FFFBF2; --card:#fff; --ink:#111; --muted:#5a5549; --orange:#F77F00; --green:#009E60; --ring:#ffb703; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14120e; --card:#1d1a14; --ink:#f5f1e8; --muted:#b9b2a2; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
+  header, main, footer { max-width: 1080px; margin: 0 auto; padding: 24px 16px; }
+  header { display:flex; align-items:center; gap:16px; }
+  header img { width:68px; height:68px; }
+  h1 { margin:0; font-size:2.1rem; letter-spacing:-.02em; }
+  h2 { margin-top:0; font-size:1.15rem; }
+  .tag { margin:2px 0 0; color:var(--muted); }
+  .card { background:var(--card); border:3px solid var(--ink); border-radius:16px; padding:20px; margin:20px 0; box-shadow:6px 6px 0 var(--ink); }
+  .grid { display:grid; gap:20px; }
+  @media (min-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } .grid .full { grid-column: 1 / -1; } }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; margin:0 0 4px; }
+  .stat { border:2px solid var(--ink); border-radius:12px; padding:10px 12px; }
+  .stat b { display:block; font-size:1.5rem; line-height:1.1; }
+  .stat span { color:var(--muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.04em; }
+  select, input[type=search], input[type=tel] { width:100%; padding:10px; margin:6px 0 12px; border:2px solid var(--ink); border-radius:10px; background:var(--card); color:var(--ink); font-size:1rem; }
+  label { font-weight:700; display:block; }
+  #path { font-weight:700; color:var(--green); min-height:1.5em; }
+  ul { list-style:none; padding:0; margin:0; }
+  li { display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px dashed var(--muted); }
+  li:last-child { border-bottom:0; }
+  .date { font-variant-numeric: tabular-nums; white-space:nowrap; }
+  .tbc { color:var(--orange); }
+  pre { background:#111; color:#f5f1e8; padding:14px; border-radius:10px; overflow-x:auto; font-size:.86rem; border:2px solid var(--ink); }
+  a { color:var(--green); font-weight:700; }
+  .note { color:var(--muted); font-size:.9rem; }
+  .pill { display:inline-block; border:2px solid var(--ink); border-radius:999px; padding:2px 10px; font-size:.8rem; font-weight:700; background:var(--ring); color:#111; }
+  .result { border:2px dashed var(--ink); border-radius:12px; padding:10px 12px; min-height:3.2em; }
+  .hits { max-height:230px; overflow:auto; }
+</style>
+</head>
+<body>
+<header>
+  <img src="assets/logo.svg" alt="Logo ci-data">
+  <div>
+    <h1>ci-data</h1>
+    <p class="tag">Open data &amp; API pour la Côte d’Ivoire · Every Ivorian form needs a clean region → commune list</p>
+  </div>
+</header>
+<main>
+  <section class="card">
+    <h2>Ce que contient le dépôt</h2>
+    <div class="stats" id="stats"></div>
+    <p class="note">Chaque enregistrement porte sa <b>source</b> et un niveau de <b>confiance</b> (<code>official</code> / <code>derived</code>). Tout est régénéré par <code>npm run build</code> puis vérifié par <code>npm test</code> dans GitHub Actions.</p>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Cascade district → commune</h2>
+      <div id="cascade"></div>
+      <p id="path"></p>
+      <p class="note" id="leaffloor">Les niveaux s’ajoutent tout seuls : un district sans sous-préfectures connue s’arrête à la commune.</p>
+    </section>
+
+    <section class="card">
+      <h2>Recherche</h2>
+      <label for="search">Nom, code ou chef-lieu</label>
+      <input type="search" id="search" placeholder="cocody, bouaké, CI-SV-28, Tiassalé…">
+      <ul class="hits" id="hits"></ul>
+      <p class="note" id="hitscount"></p>
+    </section>
+
+    <section class="card">
+      <h2>Jours fériés</h2>
+      <label for="year">Année</label>
+      <select id="year"></select>
+      <ul id="holidays"></ul>
+      <p class="note">Fêtes islamiques : date hégirienne convertie, <span class="tbc">à confirmer</span> car proclamée après observation de la lune.</p>
+    </section>
+
+    <section class="card">
+      <h2>Plan de numérotation</h2>
+      <label for="phone">Numéro ivoirien</label>
+      <input type="tel" id="phone" value="+225 07 11 22 33 44">
+      <div class="result" id="phoneout"></div>
+      <ul id="ops"></ul>
+      <p class="note">Résolution au préfixe le plus long : opérateur mobile, indicatif fixe, zone géographique ou numéro de service.</p>
+    </section>
+
+    <section class="card full">
+      <h2>Utiliser les données</h2>
+<pre># JSON brut, sans serveur (GitHub Pages)
+curl https://ck526438-lgtm.github.io/ci-data/data/regions.json
+
+# API locale
+npm install &amp;&amp; npm start
+curl "http://localhost:3000/v1/regions?level=district"
+curl "http://localhost:3000/v1/subdivisions?parent=CI-LG-03&amp;level=commune"
+curl "http://localhost:3000/v1/holidays?year=2026"
+curl "http://localhost:3000/v1/phone-prefixes/resolve?number=0500112233"
+
+# Paquet Node
+const ci = require("./packages/js");
+ci.getCommunes("CI-AB").map(c =&gt; c.name);   // les 17 communes du district d’Abidjan
+ci.getPath("CI-AB-01").map(n =&gt; n.name);    // District Autonome d’Abidjan › Abidjan
+ci.isHoliday("2026-08-07").name_fr;         // Fête de l’Indépendance</pre>
+      <p><a href="https://github.com/ck526438-lgtm/ci-data">Dépôt GitHub</a> · <a href="https://github.com/ck526438-lgtm/ci-data/blob/main/data/SOURCES.md">Provenance des données</a> · Licence MIT</p>
+    </section>
+  </div>
+</main>
+<footer class="note">Contributions bienvenues — corrigez une donnée par pull request, avec sa source. Données : OCHA/humdata, INS-RGPH 2021, ISO 3166-2, Wikipédia, Wikidata, ARTCI.</footer>
+
+<script>
+const LABELS = { district:"District", region:"Région", department:"Département", sub_prefecture:"Sous-préfecture", commune:"Commune" };
+const MONTHS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const strip = (s) => (s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+async function loadJSON(name) {
+  for (const base of ["./data/", "../data/"]) {
+    try { const r = await fetch(base + name); if (r.ok) return await r.json(); } catch (e) {}
+  }
+  throw new Error("Impossible de charger " + name);
+}
+
+function formatDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return (d === 1 ? "1er" : d) + " " + MONTHS[m - 1] + " " + y;
+}
+
+function holidayDate(h, y) {
+  if (h.type === "fixed") return `${y}-${String(h.month).padStart(2, "0")}-${String(h.day).padStart(2, "0")}`;
+  return (h.dates && h.dates[y]) || null;
+}
+
+function resolvePhone(number, prefixes) {
+  const raw = String(number || "").replace(/[^0-9]/g, "").replace(/^225/, "");
+  let best = null;
+  for (const p of prefixes) for (const x of p.prefixes)
+    if (raw.startsWith(x) && (!best || x.length > best.x.length)) best = { p, x };
+  return best;
+}
+
+(async function main() {
+  const [regions, holidays, prefixes] = await Promise.all([
+    loadJSON("regions.json"), loadJSON("holidays.json"), loadJSON("phone-prefixes.json"),
+  ]);
+  const byCode = new Map(regions.map(r => [r.code, r]));
+  const count = {};
+  for (const r of regions) count[r.level] = (count[r.level] || 0) + 1;
+
+  // --- Statistiques ---
+  document.getElementById("stats").innerHTML =
+    ["district","region","department","sub_prefecture","commune"]
+      .map(l => `<div class="stat"><b>${count[l] || 0}</b><span>${LABELS[l]}s</span></div>`).join("")
+    + `<div class="stat"><b>${holidays.length}</b><span>Jours fériés</span></div>`
+    + `<div class="stat"><b>${prefixes.length}</b><span>Préfixes</span></div>`;
+
+  // --- Sélecteurs en cascade ---
+  const cascade = document.getElementById("cascade");
+  const pathEl = document.getElementById("path");
+  const chain = [];
+
+  function addSelect(options, depth) {
+    const level = options[0].level;
+    const levels = [...new Set(options.map(o => o.level))];
+    const mixed = levels.length > 1;
+    const wrap = document.createElement("div");
+    const label = document.createElement("label");
+    const sel = document.createElement("select");
+    const id = "lvl-" + depth;
+    label.htmlFor = id;
+    label.textContent = `${levels.map(l => LABELS[l] + "s").join(" · ")} (${options.length})`;
+    sel.id = id;
+    sel.innerHTML = '<option value="">— Choisir —</option>' +
+      options.map(o => `<option value="${o.code}">${o.name}${o.capital ? " · " + o.capital : ""}${mixed ? " — " + LABELS[o.level] : ""}</option>`).join("");
+    sel.addEventListener("change", () => {
+      while (cascade.children.length > depth + 1) cascade.removeChild(cascade.lastChild);
+      chain.length = depth;
+      if (sel.value) {
+        const item = byCode.get(sel.value);
+        chain.push(item);
+        const kids = regions.filter(r => r.parent === item.code);
+        if (kids.length) addSelect(kids, depth + 1);
+      }
+      pathEl.textContent = chain.map(c => c.name).join(" › ");
+    });
+    wrap.append(label, sel);
+    cascade.appendChild(wrap);
+  }
+  const roots = regions.filter(r => !r.parent);
+  if (roots.length) addSelect(roots, 0);
+
+  // Exemple pré-sélectionné : la démo montre une cascade complète sans avoir à cliquer.
+  const pick = (depth, code) => {
+    const sel = cascade.children[depth] && cascade.children[depth].querySelector("select");
+    if (!sel) return;
+    sel.value = code;
+    sel.dispatchEvent(new Event("change"));
+  };
+  ["CI-AB", "CI-AB-01", "CI-AB-01-C09"].forEach((code, depth) => pick(depth, code));
+
+  // --- Recherche ---
+  const search = document.getElementById("search");
+  const hits = document.getElementById("hits");
+  const hitsCount = document.getElementById("hitscount");
+  function renderSearch() {
+    const q = strip(search.value.trim());
+    if (!q) { hits.innerHTML = '<li><span class="note">Tapez un début de nom ou un code.</span></li>'; hitsCount.textContent = ""; return; }
+    const found = regions.filter(r =>
+      strip(r.name).includes(q) || strip(r.capital || "").includes(q) || r.code.toLowerCase().includes(q)
+    ).slice(0, 60);
+    hits.innerHTML = found.map(r => {
+      const chainNames = [];
+      for (let c = r; c; c = byCode.get(c.parent)) chainNames.unshift(c.name);
+      return `<li><span><b>${r.name}</b><br><span class="note">${chainNames.slice(1).join(" › ")}</span></span>` +
+             `<span class="date"><span class="pill">${LABELS[r.level]}</span><br><span class="note">${r.code}</span></span></li>`;
+    }).join("") || '<li><span class="note">Aucun résultat.</span></li>';
+    hitsCount.textContent = `${found.length} résultat(s) affiché(s)`;
+  }
+  search.addEventListener("input", renderSearch);
+  search.value = "bouaké";
+  renderSearch();
+
+  // --- Jours fériés ---
+  const yearSel = document.getElementById("year");
+  const list = document.getElementById("holidays");
+  const years = new Set();
+  for (const h of holidays) for (const y of Object.keys(h.dates || {})) years.add(Number(y));
+  const minYear = Math.min(...years), maxYear = Math.max(...years);
+  const now = new Date().getFullYear();
+  for (let y = minYear; y <= maxYear; y++) {
+    const o = document.createElement("option");
+    o.value = y; o.textContent = y;
+    if (y === Math.min(Math.max(now, minYear), maxYear)) o.selected = true;
+    yearSel.appendChild(o);
+  }
+  function renderHolidays() {
+    const y = yearSel.value;
+    const rows = holidays.map(h => ({ h, iso: holidayDate(h, y) }))
+      .sort((a, b) => (a.iso || "9").localeCompare(b.iso || "9"));
+    list.innerHTML = rows.map(({ h, iso }) =>
+      `<li><span>${h.name_fr}${h.confidence === "derived" ? ' <span class="note">(hégirien)</span>' : ""}</span>` +
+      `<span class="date ${iso ? "" : "tbc"}">${iso ? formatDate(iso) : "à confirmer"}</span></li>`
+    ).join("");
+  }
+  yearSel.addEventListener("change", renderHolidays);
+  renderHolidays();
+
+  // --- Numérotation ---
+  const phone = document.getElementById("phone");
+  const phoneout = document.getElementById("phoneout");
+  function renderPhone() {
+    const hit = resolvePhone(phone.value, prefixes);
+    const label = hit && (hit.p.operator || hit.p.service || hit.p.zone || hit.p.id);
+    phoneout.innerHTML = hit
+      ? `<b>${label}</b> — ${LABELS_KIND[hit.p.kind] || hit.p.kind}<br>` +
+        `<span class="note">préfixe ${hit.x} · correspondances : ${hit.p.prefixes.join(", ")}</span>`
+      : '<span class="tbc">Préfixe inconnu — vérifiez le numéro (10 chiffres, indicatif 225 ignoré).</span>';
+  }
+  const LABELS_KIND = { operator_mobile:"mobile", operator_landline:"fixe", geographic_zone:"zone géographique", service:"numéro de service" };
+  document.getElementById("ops").innerHTML = prefixes.filter(p => p.kind === "operator_mobile")
+    .map(p => `<li><span>${p.operator}</span><span class="date"><span class="pill">${p.prefixes.join(" · ")}</span></span></li>`).join("");
+  phone.addEventListener("input", renderPhone);
+  renderPhone();
+})().catch(err => {
+  document.getElementById("cascade").textContent = "Erreur de chargement : " + err.message;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+[
+ {
+  "id": "all-saints",
+  "name_fr": "Toussaint",
+  "name_en": "All Saints' Day",
+  "month": 11,
+  "day": 1,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "assumption",
+  "name_fr": "Assomption",
+  "name_en": "Assumption",
+  "month": 8,
+  "day": 15,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "christmas",
+  "name_fr": "Noël",
+  "name_en": "Christmas",
+  "month": 12,
+  "day": 25,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "independence-day",
+  "name_fr": "Fête de l'Indépendance",
+  "name_en": "Independence Day",
+  "month": 8,
+  "day": 7,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "labour-day",
+  "name_fr": "Fête du Travail",
+  "name_en": "Labour Day",
+  "month": 5,
+  "day": 1,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "new-year",
+  "name_fr": "Jour de l'An",
+  "name_en": "New Year's Day",
+  "month": 1,
+  "day": 1,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "peace-day",
+  "name_fr": "Journée nationale de la Paix",
+  "name_en": "National Peace Day",
+  "month": 11,
+  "day": 15,
+  "type": "fixed",
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne)",
+  "confidence": "official"
+ },
+ {
+  "id": "ascension",
+  "name_fr": "Ascension",
+  "name_en": "Ascension Day",
+  "type": "movable_christian",
+  "rule": {
+   "easter_offset_days": 39
+  },
+  "dates": {
+   "2023": "2023-05-18",
+   "2024": "2024-05-09",
+   "2025": "2025-05-29",
+   "2026": "2026-05-14",
+   "2027": "2027-05-06",
+   "2028": "2028-05-25",
+   "2029": "2029-05-10",
+   "2030": "2030-05-30",
+   "2031": "2031-05-22",
+   "2032": "2032-05-06"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — date calculée à partir de Pâques",
+  "confidence": "official"
+ },
+ {
+  "id": "easter-monday",
+  "name_fr": "Lundi de Pâques",
+  "name_en": "Easter Monday",
+  "type": "movable_christian",
+  "rule": {
+   "easter_offset_days": 1
+  },
+  "dates": {
+   "2023": "2023-04-10",
+   "2024": "2024-04-01",
+   "2025": "2025-04-21",
+   "2026": "2026-04-06",
+   "2027": "2027-03-29",
+   "2028": "2028-04-17",
+   "2029": "2029-04-02",
+   "2030": "2030-04-22",
+   "2031": "2031-04-14",
+   "2032": "2032-03-29"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — date calculée à partir de Pâques",
+  "confidence": "official"
+ },
+ {
+  "id": "korite",
+  "name_fr": "Korité (Aïd el-Fitr)",
+  "name_en": "Eid al-Fitr",
+  "type": "movable_islamic",
+  "rule": {
+   "hijri_day": 1,
+   "hijri_month": 10,
+   "label": "1 Shawwal"
+  },
+  "dates": {
+   "2023": "2023-04-21",
+   "2024": "2024-04-10",
+   "2025": "2025-03-30",
+   "2026": "2026-03-20",
+   "2027": "2027-03-09",
+   "2028": "2028-02-26",
+   "2029": "2029-02-14",
+   "2030": "2030-02-04",
+   "2031": "2031-01-24",
+   "2032": "2032-01-14"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — dates via AlAdhan (calcul astronomique)",
+  "confidence": "derived",
+  "note": "Date indicative : la fête est officiellement fixée en Côte d'Ivoire après l'observation de la lune (±1-2 jours)."
+ },
+ {
+  "id": "lailat",
+  "name_fr": "Nuit du Destin (Lailatoul Kadr)",
+  "name_en": "Laylat al-Qadr",
+  "type": "movable_islamic",
+  "rule": {
+   "hijri_day": 27,
+   "hijri_month": 9,
+   "label": "27 Ramadan"
+  },
+  "dates": {
+   "2023": "2023-04-18",
+   "2024": "2024-04-06",
+   "2025": "2025-03-27",
+   "2026": "2026-03-16",
+   "2027": "2027-03-06",
+   "2028": "2028-02-23",
+   "2029": "2029-02-11",
+   "2030": "2030-01-31",
+   "2031": "2031-01-21",
+   "2032": "2032-12-30"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — dates via AlAdhan (calcul astronomique)",
+  "confidence": "derived",
+  "note": "Date indicative : la fête est officiellement fixée en Côte d'Ivoire après l'observation de la lune (±1-2 jours)."
+ },
+ {
+  "id": "maouloud",
+  "name_fr": "Maouloud (Naissance du Prophète)",
+  "name_en": "Mawlid",
+  "type": "movable_islamic",
+  "rule": {
+   "hijri_day": 12,
+   "hijri_month": 3,
+   "label": "12 Rabi' al-awwal"
+  },
+  "dates": {
+   "2023": "2023-09-27",
+   "2024": "2024-09-15",
+   "2025": "2025-09-04",
+   "2026": "2026-08-25",
+   "2027": "2027-08-14",
+   "2028": "2028-08-03",
+   "2029": "2029-07-24",
+   "2030": "2030-07-13",
+   "2031": "2031-07-02",
+   "2032": "2032-06-20"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — dates via AlAdhan (calcul astronomique)",
+  "confidence": "derived",
+  "note": "Date indicative : la fête est officiellement fixée en Côte d'Ivoire après l'observation de la lune (±1-2 jours)."
+ },
+ {
+  "id": "tabaski",
+  "name_fr": "Tabaski (Aïd el-Kébir)",
+  "name_en": "Eid al-Adha",
+  "type": "movable_islamic",
+  "rule": {
+   "hijri_day": 10,
+   "hijri_month": 12,
+   "label": "10 Dhul Hijjah"
+  },
+  "dates": {
+   "2023": "2023-06-28",
+   "2024": "2024-06-16",
+   "2025": "2025-06-06",
+   "2026": "2026-05-27",
+   "2027": "2027-05-16",
+   "2028": "2028-05-05",
+   "2029": "2029-04-24",
+   "2030": "2030-04-13",
+   "2031": "2031-04-02",
+   "2032": "2032-03-22"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — dates via AlAdhan (calcul astronomique)",
+  "confidence": "derived",
+  "note": "Date indicative : la fête est officiellement fixée en Côte d'Ivoire après l'observation de la lune (±1-2 jours)."
+ },
+ {
+  "id": "whit-monday",
+  "name_fr": "Lundi de Pentecôte",
+  "name_en": "Whit Monday",
+  "type": "movable_christian",
+  "rule": {
+   "easter_offset_days": 50
+  },
+  "dates": {
+   "2023": "2023-05-29",
+   "2024": "2024-05-20",
+   "2025": "2025-06-09",
+   "2026": "2026-05-25",
+   "2027": "2027-05-17",
+   "2028": "2028-06-05",
+   "2029": "2029-05-21",
+   "2030": "2030-06-10",
+   "2031": "2031-06-02",
+   "2032": "2032-05-17"
+  },
+  "source": "Liste des jours fériés en Côte d'Ivoire (Wikipédia: Public holidays in Ivory Coast / loi ivoirienne) — date calculée à partir de Pâques",
+  "confidence": "official"
+ }
+]

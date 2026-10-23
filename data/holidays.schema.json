@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ck526438-lgtm.github.io/ci-data/data/holidays.schema.json",
+  "title": "ci-data — Jour férié (Côte d'Ivoire)",
+  "type": "object",
+  "required": ["id", "name_fr", "name_en", "type", "source", "confidence"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name_fr": { "type": "string" },
+    "name_en": { "type": "string" },
+    "type": { "enum": ["fixed", "movable_christian", "movable_islamic"] },
+    "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+    "day": { "type": "integer", "minimum": 1, "maximum": 31 },
+    "rule": {
+      "type": "object",
+      "description": "Règle de calcul de la date (fêtes mobiles)",
+      "properties": {
+        "easter_offset_days": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "hijri_day": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "hijri_month": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "label": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "dates": {
+      "type": "object",
+      "description": "Dates grégoriennes par année civile, ex: {\"2026\": \"2026-05-27\"}",
+      "patternProperties": { "^[0-9]{4}$": { "type": "string", "format": "date" } },
+      "additionalProperties": false
+    },
+    "confidence": { "enum": ["official", "derived"] },
+    "note": { "type": "string" },
+    "source": { "type": "string", "minLength": 8 }
+  },
+  "allOf": [
+    { "if": { "properties": { "type": { "const": "fixed" } } }, "then": { "required": ["month", "day"] } },
+    { "if": { "properties": { "type": { "not": { "const": "fixed" } } } }, "then": { "required": ["rule", "dates"] } }
+  ],
+  "additionalProperties": false
+}

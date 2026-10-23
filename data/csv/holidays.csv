@@ -1,0 +1,141 @@
+id,name_fr,name_en,type,year,date,confidence
+new-year,Jour de l'An,New Year's Day,fixed,2023,2023-01-01,official
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2023,2023-04-10,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2023,2023-04-18,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2023,2023-04-21,derived
+labour-day,Fête du Travail,Labour Day,fixed,2023,2023-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2023,2023-05-18,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2023,2023-05-29,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2023,2023-06-28,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2023,2023-08-07,official
+assumption,Assomption,Assumption,fixed,2023,2023-08-15,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2023,2023-09-27,derived
+all-saints,Toussaint,All Saints' Day,fixed,2023,2023-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2023,2023-11-15,official
+christmas,Noël,Christmas,fixed,2023,2023-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2024,2024-01-01,official
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2024,2024-04-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2024,2024-04-06,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2024,2024-04-10,derived
+labour-day,Fête du Travail,Labour Day,fixed,2024,2024-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2024,2024-05-09,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2024,2024-05-20,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2024,2024-06-16,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2024,2024-08-07,official
+assumption,Assomption,Assumption,fixed,2024,2024-08-15,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2024,2024-09-15,derived
+all-saints,Toussaint,All Saints' Day,fixed,2024,2024-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2024,2024-11-15,official
+christmas,Noël,Christmas,fixed,2024,2024-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2025,2025-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2025,2025-03-27,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2025,2025-03-30,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2025,2025-04-21,official
+labour-day,Fête du Travail,Labour Day,fixed,2025,2025-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2025,2025-05-29,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2025,2025-06-06,derived
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2025,2025-06-09,official
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2025,2025-08-07,official
+assumption,Assomption,Assumption,fixed,2025,2025-08-15,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2025,2025-09-04,derived
+all-saints,Toussaint,All Saints' Day,fixed,2025,2025-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2025,2025-11-15,official
+christmas,Noël,Christmas,fixed,2025,2025-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2026,2026-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2026,2026-03-16,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2026,2026-03-20,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2026,2026-04-06,official
+labour-day,Fête du Travail,Labour Day,fixed,2026,2026-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2026,2026-05-14,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2026,2026-05-25,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2026,2026-05-27,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2026,2026-08-07,official
+assumption,Assomption,Assumption,fixed,2026,2026-08-15,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2026,2026-08-25,derived
+all-saints,Toussaint,All Saints' Day,fixed,2026,2026-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2026,2026-11-15,official
+christmas,Noël,Christmas,fixed,2026,2026-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2027,2027-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2027,2027-03-06,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2027,2027-03-09,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2027,2027-03-29,official
+labour-day,Fête du Travail,Labour Day,fixed,2027,2027-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2027,2027-05-06,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2027,2027-05-16,derived
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2027,2027-05-17,official
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2027,2027-08-07,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2027,2027-08-14,derived
+assumption,Assomption,Assumption,fixed,2027,2027-08-15,official
+all-saints,Toussaint,All Saints' Day,fixed,2027,2027-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2027,2027-11-15,official
+christmas,Noël,Christmas,fixed,2027,2027-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2028,2028-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2028,2028-02-23,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2028,2028-02-26,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2028,2028-04-17,official
+labour-day,Fête du Travail,Labour Day,fixed,2028,2028-05-01,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2028,2028-05-05,derived
+ascension,Ascension,Ascension Day,movable_christian,2028,2028-05-25,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2028,2028-06-05,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2028,2028-08-03,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2028,2028-08-07,official
+assumption,Assomption,Assumption,fixed,2028,2028-08-15,official
+all-saints,Toussaint,All Saints' Day,fixed,2028,2028-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2028,2028-11-15,official
+christmas,Noël,Christmas,fixed,2028,2028-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2029,2029-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2029,2029-02-11,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2029,2029-02-14,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2029,2029-04-02,official
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2029,2029-04-24,derived
+labour-day,Fête du Travail,Labour Day,fixed,2029,2029-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2029,2029-05-10,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2029,2029-05-21,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2029,2029-07-24,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2029,2029-08-07,official
+assumption,Assomption,Assumption,fixed,2029,2029-08-15,official
+all-saints,Toussaint,All Saints' Day,fixed,2029,2029-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2029,2029-11-15,official
+christmas,Noël,Christmas,fixed,2029,2029-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2030,2030-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2030,2030-01-31,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2030,2030-02-04,derived
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2030,2030-04-13,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2030,2030-04-22,official
+labour-day,Fête du Travail,Labour Day,fixed,2030,2030-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2030,2030-05-30,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2030,2030-06-10,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2030,2030-07-13,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2030,2030-08-07,official
+assumption,Assomption,Assumption,fixed,2030,2030-08-15,official
+all-saints,Toussaint,All Saints' Day,fixed,2030,2030-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2030,2030-11-15,official
+christmas,Noël,Christmas,fixed,2030,2030-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2031,2031-01-01,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2031,2031-01-21,derived
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2031,2031-01-24,derived
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2031,2031-04-02,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2031,2031-04-14,official
+labour-day,Fête du Travail,Labour Day,fixed,2031,2031-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2031,2031-05-22,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2031,2031-06-02,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2031,2031-07-02,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2031,2031-08-07,official
+assumption,Assomption,Assumption,fixed,2031,2031-08-15,official
+all-saints,Toussaint,All Saints' Day,fixed,2031,2031-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2031,2031-11-15,official
+christmas,Noël,Christmas,fixed,2031,2031-12-25,official
+new-year,Jour de l'An,New Year's Day,fixed,2032,2032-01-01,official
+korite,Korité (Aïd el-Fitr),Eid al-Fitr,movable_islamic,2032,2032-01-14,derived
+tabaski,Tabaski (Aïd el-Kébir),Eid al-Adha,movable_islamic,2032,2032-03-22,derived
+easter-monday,Lundi de Pâques,Easter Monday,movable_christian,2032,2032-03-29,official
+labour-day,Fête du Travail,Labour Day,fixed,2032,2032-05-01,official
+ascension,Ascension,Ascension Day,movable_christian,2032,2032-05-06,official
+whit-monday,Lundi de Pentecôte,Whit Monday,movable_christian,2032,2032-05-17,official
+maouloud,Maouloud (Naissance du Prophète),Mawlid,movable_islamic,2032,2032-06-20,derived
+independence-day,Fête de l'Indépendance,Independence Day,fixed,2032,2032-08-07,official
+assumption,Assomption,Assumption,fixed,2032,2032-08-15,official
+all-saints,Toussaint,All Saints' Day,fixed,2032,2032-11-01,official
+peace-day,Journée nationale de la Paix,National Peace Day,fixed,2032,2032-11-15,official
+christmas,Noël,Christmas,fixed,2032,2032-12-25,official
+lailat,Nuit du Destin (Lailatoul Kadr),Laylat al-Qadr,movable_islamic,2032,2032-12-30,derived

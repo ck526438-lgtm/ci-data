@@ -1,0 +1,65 @@
+[
+  {
+    "id": "orange-mobile",
+    "kind": "operator_mobile",
+    "operator": "Orange Côte d'Ivoire",
+    "prefixes": ["07"],
+    "source": "ARTCI — Plan national de numérotation (décision n°2020-0569 du 10 juin 2020), repris par Wikipédia fr, consulté 2026-10-23"
+  },
+  {
+    "id": "mtn-mobile",
+    "kind": "operator_mobile",
+    "operator": "MTN Côte d'Ivoire",
+    "prefixes": ["05"],
+    "source": "ARTCI — Plan national de numérotation (décision n°2020-0569 du 10 juin 2020), repris par Wikipédia fr, consulté 2026-10-23"
+  },
+  {
+    "id": "moov-mobile",
+    "kind": "operator_mobile",
+    "operator": "Moov Africa Côte d'Ivoire",
+    "prefixes": ["01"],
+    "source": "ARTCI — Plan national de numérotation (décision n°2020-0569 du 10 juin 2020), repris par Wikipédia fr, consulté 2026-10-23"
+  },
+  {
+    "id": "orange-fixed",
+    "kind": "operator_landline",
+    "operator": "Orange Côte d'Ivoire",
+    "prefixes": ["27"],
+    "source": "ARTCI — Plan national de numérotation, repris par Wikipédia fr, consulté 2026-10-23"
+  },
+  {
+    "id": "mtn-fixed",
+    "kind": "operator_landline",
+    "operator": "MTN Côte d'Ivoire",
+    "prefixes": ["25"],
+    "source": "ARTCI — Plan national de numérotation, repris par Wikipédia fr, consulté 2026-10-23"
+  },
+  {
+    "id": "moov-fixed",
+    "kind": "operator_landline",
+    "operator": "Moov Africa Côte d'Ivoire",
+    "prefixes": ["21"],
+    "source": "ARTCI — Plan national de numérotation, repris par Wikipédia fr, consulté 2026-10-23"
+  },
+  { "id": "zone-plateau", "kind": "geographic_zone", "zone": "Plateau (Abidjan)", "prefixes": ["20"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-abidjan-sud", "kind": "geographic_zone", "zone": "Abidjan-sud", "prefixes": ["21"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-cocody", "kind": "geographic_zone", "zone": "Cocody", "prefixes": ["22"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-yopougon", "kind": "geographic_zone", "zone": "Yopougon", "prefixes": ["23"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-abobo", "kind": "geographic_zone", "zone": "Abobo", "prefixes": ["24"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-yamoussoukro", "kind": "geographic_zone", "zone": "Yamoussoukro", "prefixes": ["30"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-bouake", "kind": "geographic_zone", "zone": "Bouaké", "prefixes": ["31"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-daloa", "kind": "geographic_zone", "zone": "Daloa", "prefixes": ["32"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-man", "kind": "geographic_zone", "zone": "Man", "prefixes": ["33"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-san-pedro", "kind": "geographic_zone", "zone": "San-Pédro", "prefixes": ["34"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-abengourou", "kind": "geographic_zone", "zone": "Abengourou", "prefixes": ["35"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "zone-korhogo", "kind": "geographic_zone", "zone": "Korhogo", "prefixes": ["36"], "source": "ARTCI — Plan de numérotation, zone géographique fixe, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "ccdo-100", "kind": "service", "service": "CCDO — Centre de coordination des décisions opérationnelles (urgences)", "prefixes": ["100"], "source": "ARTCI — Plan de numérotation (numéros courts), repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "ccdo-111", "kind": "service", "service": "CCDO — Centre de coordination des décisions opérationnelles (urgences)", "prefixes": ["111"], "source": "ARTCI — Plan de numérotation (numéros courts), repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "sodeci", "kind": "service", "service": "SODECI — dépannage eau", "prefixes": ["175"], "source": "ARTCI — Plan de numérotation (numéros courts), repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "cie", "kind": "service", "service": "CIE — dépannage électricité", "prefixes": ["179"], "source": "ARTCI — Plan de numérotation (numéros courts), repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "pompiers", "kind": "service", "service": "Sapeurs-pompiers", "prefixes": ["180"], "source": "ARTCI — Plan de numérotation (numéros courts), repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "samu", "kind": "service", "service": "SAMU — aide médicale urgente", "prefixes": ["185"], "source": "ARTCI — Plan de numérotation (numéros courts), repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "srv-partage", "kind": "service", "service": "Numéros de services à revenus partagés", "prefixes": ["90"], "source": "ARTCI — Plan de numérotation, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "dialup", "kind": "service", "service": "Services d'accès à Internet en dial-up", "prefixes": ["905"], "source": "ARTCI — Plan de numérotation, repris par Wikipédia fr, consulté 2026-10-23" },
+  { "id": "short-5", "kind": "service", "service": "Numéros courts à 5 chiffres (raccourcis commerciaux)", "prefixes": ["98"], "source": "ARTCI — Plan de numérotation, repris par Wikipédia fr, consulté 2026-10-23" }
+]

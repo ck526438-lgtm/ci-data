@@ -1,0 +1,12 @@
+{
+  "name": "ci-data",
+  "version": "0.1.0",
+  "description": "Open data for Côte d'Ivoire: regions, communes, public holidays — Données ouvertes pour la Côte d'Ivoire",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": ["index.js", "index.d.ts", "data", "README.md"],
+  "scripts": { "prepack": "node ../../scripts/sync-data.js" },
+  "keywords": ["cote-d-ivoire", "ivory-coast", "open-data", "regions", "communes", "holidays", "africa"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/ck526438-lgtm/ci-data.git" }
+}

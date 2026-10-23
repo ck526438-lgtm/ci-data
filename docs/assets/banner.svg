@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="ci-data — Open data and API for Côte d’Ivoire : 1609 subdivisions, 946 communes, jours fériés 2023 à 2032">
+  <rect width="1200" height="400" fill="#FFFBF2"/>
+  <rect x="0" y="0" width="1200" height="16" fill="#F77F00"/>
+  <rect x="0" y="384" width="1200" height="16" fill="#009E60"/>
+  <rect x="40" y="48" width="1120" height="304" rx="18" fill="#FFFFFF" stroke="#111" stroke-width="5"/>
+  <g transform="translate(84,112)">
+    <rect width="168" height="168" rx="34" fill="#fff" stroke="#111" stroke-width="6"/>
+    <rect x="3" y="3" width="54" height="162" fill="#F77F00" rx="31"/>
+    <rect x="57" y="3" width="54" height="162" fill="#fff"/>
+    <rect x="111" y="3" width="54" height="162" fill="#009E60" rx="31"/>
+    <rect width="168" height="168" rx="34" fill="none" stroke="#111" stroke-width="6"/>
+    <text x="84" y="108" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="60" fill="#111">ci</text>
+  </g>
+  <text x="286" y="176" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="78" fill="#111">ci-data</text>
+  <text x="290" y="218" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#333">Open data &amp; API pour la Côte d’Ivoire</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="20">
+    <rect x="290" y="246" width="126" height="38" rx="19" fill="#F77F00" stroke="#111" stroke-width="3"/>
+    <text x="353" y="271" text-anchor="middle" fill="#111">Régions</text>
+    <rect x="428" y="246" width="156" height="38" rx="19" fill="#fff" stroke="#111" stroke-width="3"/>
+    <text x="506" y="271" text-anchor="middle" fill="#111">Jours fériés</text>
+    <rect x="596" y="246" width="128" height="38" rx="19" fill="#009E60" stroke="#111" stroke-width="3"/>
+    <text x="660" y="271" text-anchor="middle" fill="#fff">API · npm</text>
+  </g>
+  <line x1="768" y1="88" x2="768" y2="312" stroke="#111" stroke-width="3" stroke-dasharray="8 8" opacity="0.35"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="end">
+    <text x="1136" y="140" font-weight="800" font-size="46" fill="#111">1 609</text>
+    <text x="1136" y="164" font-size="17" fill="#555">subdivisions hiérarchisées</text>
+    <text x="1136" y="222" font-weight="800" font-size="46" fill="#F77F00">946</text>
+    <text x="1136" y="246" font-size="17" fill="#555">communes · 510 sous-préfectures</text>
+    <text x="1136" y="300" font-weight="800" font-size="34" fill="#009E60">2023 → 2032</text>
+    <text x="1136" y="320" font-size="17" fill="#555">jours fériés datés · MIT</text>
+  </g>
+</svg>

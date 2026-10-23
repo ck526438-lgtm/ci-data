@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ck526438-lgtm.github.io/ci-data/data/phone-prefixes.schema.json",
+  "title": "ci-data — Préfixe et numéro court (Côte d'Ivoire)",
+  "type": "object",
+  "required": ["id", "kind", "prefixes", "source"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "kind": { "enum": ["operator_mobile", "operator_landline", "geographic_zone", "service"] },
+    "operator": { "type": "string" },
+    "zone": { "type": "string" },
+    "service": { "type": "string" },
+    "prefixes": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[0-9]{2,4}$" } },
+    "source": { "type": "string", "minLength": 8 }
+  },
+  "allOf": [
+    { "if": { "properties": { "kind": { "enum": ["operator_mobile", "operator_landline"] } } }, "then": { "required": ["operator"] } },
+    { "if": { "properties": { "kind": { "const": "geographic_zone" } } }, "then": { "required": ["zone"] } },
+    { "if": { "properties": { "kind": { "const": "service" } } }, "then": { "required": ["service"] } }
+  ],
+  "additionalProperties": false
+}

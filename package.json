@@ -1,0 +1,23 @@
+{
+  "name": "ci-data",
+  "version": "0.1.0",
+  "description": "Open data and API for Côte d'Ivoire — Données ouvertes et API pour la Côte d'Ivoire",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build-data.js && node scripts/build-holidays.js",
+    "csv": "node scripts/export-csv.js",
+    "validate": "node scripts/validate.js",
+    "test": "node scripts/validate.js && node scripts/smoke-test.js",
+    "sync": "node scripts/sync-data.js && node scripts/export-csv.js",
+    "start": "node api/server.js",
+    "demo": "npx serve ."
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.16",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
